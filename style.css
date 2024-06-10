@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 :root {
   --clr-primary-400: 263 55% 52%;
   --clr-secondary-400: 217 19% 35%;
@@ -92,13 +93,11 @@ select {
 }
 
 body {
-  display: grid;
+ 
   place-content: center;
   min-height: 100vh;
-
   font-family: var(--ff-primary);
   font-weight: var(--fw-400);
-
   background-color: hsl(var(--clr-neutral-200));
 }
 
@@ -111,8 +110,15 @@ h3 {
 /* utilities */
 .flex {
   display: flex;
-  gap: var(--gap, 1rem);
+  
 }
+:root {
+  --primary: #0077FF;
+  --dark: #000;
+}
+
+
+
 
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
@@ -141,6 +147,339 @@ h3 {
 .border-primary-400 {
   border: 2px solid #a775f1;
 }
+/* Container styling */
+
+/* Styling for the weather card */
+.weather-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #fff;
+}
+.flex {
+  display: flex;
+}
+* {
+  box-sizing: border-box;
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  
+  /* width: 100%; */
+  /* max-width: 280px; */
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.inp .label {
+  position: absolute;
+  top: -5px;
+  left: 10.9rem;
+  font-size: 16px;
+  color: #007BFF;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  color: #007BFF;
+}
+
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05); /* Assuming $dark is black */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.inp input {
+  
+  border: none; /* Removes all borders */
+  border-bottom: 2px solid blue; /* Adds a solid blue bottom border */
+  outline: none; 
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  font-family: inherit;
+  /*padding: 16px 12px 0 12px;  */
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.02); /* Assuming $dark is black */
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #000; /* Assuming $dark is black */
+  transition: all 0.15s ease;
+}
+
+.inp input:hover {
+  background: rgba(0, 0, 0, 0.04); /* Assuming $dark is black */
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5); /* Assuming $dark is black */
+  
+}
+
+.inp input:focus {
+  background: rgba(0, 0, 0, 0.05); /* Assuming $dark is black */
+  outline: none;
+  box-shadow: inset 0 -2px 0 #0077FF; /* Assuming $primary is #0077FF */
+}
+
+.inp input:focus + .label {
+  color: #0077FF; /* Assuming $primary is #0077FF */
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
+}
+
+
+/* Styling for weather data elements */
+.weather-data {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Styling for the card title */
+.weather-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the card header */
+.weather-header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Styling for additional weather information */
+.weather-additional-info {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Styling for individual additional info elements */
+.weather-additional-info p {
+  margin: 5px 0;
+}
+.todo-grid {
+  display: grid;
+  grid-template-columns: 140px 100px 190px;
+  grid-gap: 4px; /* Space between tasks */
+  padding: 10px; /* Space within the container */
+  margin: 10px 0; /* Space around the container */
+  align-items: start; 
+  font-size: 14px;
+  color: #333;
+  background-color: aliceblue;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.8em;
+}
+.js-todo-list {
+  display: grid; /* Change back to display: grid */
+  font-family: 'Roboto', sans-serif;
+
+}
+.todo-title {
+  font-family: 'Arial', sans-serif; /* Wybierz czcionkę, która Ci się podoba */
+  color: #333; /* Kolor tekstu, tutaj ciemnoszary */
+  text-align: center; /* Centrowanie tekstu */
+  padding: 10px; /* Dodanie odstępu wewnątrz elementu */
+  margin-top: 20px; /* Dodanie marginesu od góry */
+  margin-bottom: 20px; /* Dodanie marginesu od dołu */
+  background-color: aliceblue;
+  border-radius: 8px; /* Zaokrąglenie rogów */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu głębi */
+  font-size: 1em; /* Rozmiar czcionki */
+}
+
+/* Możesz także dodać efekt podkreślenia lub inny dekoracyjny element */
+.todo-title::after {
+  content: '';
+  display: block;
+  width: 50px; /* Szerokość linii */
+  height: 4px; /* Grubość linii */
+  background-color: #3498db; /* Kolor linii */
+  margin: 10px auto; /* Centrowanie linii */
+}
+.input-button-container2 {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+}
+.inp input, .inp span, .but, .but2 {
+  font-size: 0.9rem;  /* Base font size for larger screens */
+}
+.js-name-input {
+  font-size: 14px;          /* Sets the font size */
+  background-color: #f0f0f0; /* Sets the background color */
+  border: 1px solid #d1d1d1; /* Sets the border */
+  padding: 2px 12px;         /* Sets the padding inside the input */
+  border-radius: 4px;        /* Rounds the corners of the input field */
+  outline: none;     
+  width: 100%;           /* Makes the input width expand to its parent's width */
+  max-width: 300px;  
+  box-sizing: border-box;  
+  display: inline-block;  
+  flex: 1;   /* Removes the default focus outline */
+  min-width: 150px;
+}
+input.js-name-input2 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  
+  /*border: 1px solid orange; */
+}
+.js-name-input:focus {
+    border: 2px solid #0077FF; /* Solid green border */
+    background-color: #f0fff0; /* Very light green background */
+    color: #333; /* Darker text color for contrast */
+    padding: 5px; /* Slightly larger padding for a pop-out effect */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for border and shadow      /* Changes border color when input is focused */
+}
+.input-button-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  
+}.input-button-container2 {
+ 
+}
+.gg-calendar {
+  display: inline-block;
+}
+
+.but {
+  font-size: 16px;          /* Sets the font size */
+  background-color: #0077FF; /* Sets the background color */
+  color: white;             /* Sets the text color */      /* Sets the padding inside the button */
+  border: none;             /* Removes the border */
+  border-radius: 50px;       /* Rounds the corners of the button */
+  cursor: pointer;          /* Changes the mouse cursor to a pointer */
+  outline: none;            /* Removes the default focus outline */
+  transition: 0.3s;  
+  height: 25px;
+  width: 100%;
+  max-width: 80px;  
+  display: inline-block; 
+  margin-left: 5px;   /* Adds a smooth transition for hover effect */
+}
+.but2 {
+  border: 0.2px solid #000000; /* 1px solid black border */
+  /* padding: 8px 16px; Adjust padding as needed */
+  background-color: transparent;
+  border-radius: 30px; /* Change background color as needed */
+  color: #000000; /* Text color */
+  font-size: 14px; /* Adjust font size as needed */
+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+  outline: none; 
+  width: 10px;
+  width: 100%;
+  height: 25px;
+  max-width: 100px;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.delete-button {
+  font-size: 14px;          /* Sets the font size */
+  background-color: #0077FF; /* Sets the background color */
+  color: white;             /* Sets the text color */      /* Sets the padding inside the button */
+  border: none;             /* Removes the border */
+  border-radius: 50px;       /* Rounds the corners of the button */
+  cursor: pointer;          /* Changes the mouse cursor to a pointer */
+  outline: none;            /* Removes the default focus outline */
+  transition: 0.3s;  
+  height: 30px;
+  width: 100%;
+  max-width: 80px;  
+  height: 25px;
+  display: inline-block; 
+  margin-left: 5px; 
+}
+.js-button , .js-subscribe-button, .resetButton {
+  width: 100%;
+  max-width: 250px;
+  
+}
+.js-cost-input {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+.wrapper {
+  background-color: #ecf2f8;
+  margin: 0 auto;
+  padding: 10px;
+  width: 40rem;
+  max-width: 600px;
+  max-height: 400px;
+  color:black;
+  background-color: #ecf2f8;
+  border-radius: 10px;
+  -webkit-box-shadow: -3px 6px 70px -3px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -3px 6px 70px -3px rgba(66, 68, 90, 1);
+  box-shadow: -3px 6px 70px -3px rgba(66, 68, 90, 1);
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+.centre {
+  text-align: center;
+}
+.js-subscribe-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background-color:#fe1a00;
+	border-radius:30px;
+	border:1px solid #eb2715;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+  font-style: Arial;
+	padding:4px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+
+}
+.js-subscribe-button:hover {
+	background-color:#ce0100;
+}
+.js-subscribe-button:active {
+	position:relative;
+	top:1px;
+}
+.but:hover {
+  background-color: #3818ac; /* Darkens the button on hover */
+}
+.delete-button:hover {
+  background-color: #3818ac;
+}
+
 
 /* components */
 .testimonial-grid {
@@ -181,7 +520,38 @@ h3 {
 .testimonial:nth-child(5) {
   grid-area: five;
 }
+.testimonial.quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
 
+.testimonial img {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testimonial .name {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1;
+}
+
+.testimonial .position {
+  font-size: var(--fs-300);
+  opacity: 0.5;
+}
+
+.testimonial > p:first-of-type {
+  font-size: var(--fs-500);
+  line-height: 1.2;
+}
+
+.testimonial > p:last-of-type {
+  opacity: 0.9;
+}
 @media screen and (min-width: 33em) {
   .testimonial-grid {
       grid-template-areas:
@@ -218,36 +588,126 @@ h3 {
       "three four four five";
   }
 }
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;  /* Allow the wrapper to take more width on smaller screens */
+    padding: 25px;
+  }
 
+  .input-button-container2 {
+    flex-direction: column;  /* Stack the elements vertically on smaller screens */
+    align-items: center;
+  }
+  .inp input, .inp span, .but, .but2 {
+    /*font-size: 0.8rem; 
+    margin-top: 6px; */
+  }
+  .label {
+    position: absolute;
+    margin-bottom: 10rem;
+  }
+  .but, .but2 {
+    width: 100%;  /* Make buttons span the full width for easier access */
+    margin-bottom: 10px;  /* Add spacing between stacked buttons */
 
-.testimonial.quote {
-  background-image: url("./images/bg-pattern-quotation.svg");
-  background-repeat: no-repeat;
-  background-position: top right 10%;
+  }
 }
 
-.testimonial img {
-  width: 1.75rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
+@media (max-width: 480px) {
+  .wrapper {
+    width: 95%;  /* Use almost the full screen width on very small devices */
+    padding: 2px;
+  }
+
+  .inp input[type="date"] {
+    width: 100%;  /* Ensure the date picker does not overflow */
+    margin-left: 5px;
+  }
+
+   .input-button-container2 {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red; */
+  }
+  .inp {
+   /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
-.testimonial .name {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-400);
-  line-height: 1;
+
+
+@media (max-width: 600px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+
+  .testimonial {
+    padding: 1rem; /* Reduced padding */
+  }
+
+  .testimonial img {
+    width: auto; /* Allow image to adjust based on container size */
+    max-width: 50px; /* Set max-width for image to prevent overflow */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .testimonial .name,
+  .testimonial .position {
+    font-size: var(--fs-400); /* Adjust font size if needed */
+  }
+
+  .testimonial > p {
+    font-size: var(--fs-400); /* Adjust paragraph font size for readability */
+  }
 }
 
-.testimonial .position {
-  font-size: var(--fs-300);
-  opacity: 0.5;
+@media (max-width: 550px) { /* Slightly wider range to cover more devices */
+  .testimonial-grid {
+    padding: 5px; /* Reduced padding for the grid */
+  }
+
+  .testimonial {
+    margin: 5px; /* Ensure there's a small margin around testimonials */
+    padding: 10px; /* Reduced padding inside each testimonial */
+  }
+
+  .testimonial img {
+    max-width: 80px; /* Further reduce max width of images */
+  }
+
+  .testimonial .name,
+  .testimonial .position {
+    font-size: var(--fs-300); /* Reduce font size for names and positions */
+  }
+
+  .testimonial > p {
+    font-size: var(--fs-300); /* Reduce font size for paragraphs */
+  }
 }
 
-.testimonial > p:first-of-type {
-  font-size: var(--fs-500);
-  line-height: 1.2;
-}
 
-.testimonial > p:last-of-type {
-  opacity: 0.7;
+
+@media (max-width: 480px) {
+  .testimonial-grid {
+    padding: 0; /* Remove padding at very small sizes */
+  }
+
+  .testimonial {
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  .testimonial .name,
+  .testimonial .position,
+  .testimonial > p {
+    font-size: var(--fs-300); /* Further reduce font size for smaller devices */
+  }
 }

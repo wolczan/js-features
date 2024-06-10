@@ -8,121 +8,165 @@
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">  
   <!-- my css -->
   <link rel="stylesheet" href="style.css">
-  <title>FEM grid</title>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/calendar.css' rel='stylesheet'>
+  <title>Blog site</title>
 </head>
 
-<body>
-  <main class="testimonial-grid">
-    <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
-      <div class="flex">
-        <div>
-          <img  src="./images/image-daniel.jpg" alt="daniel clifford">
-        </div>
-        <div>
-          <h2 class="name">Daniel Clifford</h2>
-          <p class="position">Verified Graduate</p>
-        </div>
-      </div>
-      <p>
-        I received a job offer mid-course, and the subjects I learned were current, if not more so,
-        in the company I joined. I honestly feel I got every penny’s worth.
-      </p>
-      <p>
-        “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
-        transition and have heard some people who had an amazing experience here. I signed up
-        for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
-        The next 12 weeks was the best - and most grueling - time of my life. Since completing
-        the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-      </p>
-    </article>
-    <article class="testimonial flow bg-secondary-400 text-neutral-100">
-      <div class="flex">
-        <div>
-          <img src="./images/image-jonathan.jpg" alt="Jonathan Walters">
-        </div>
-        <div>
-          <h2 class="name">Jonathan Walters</h2>
-          <p class="position">Verified Graduate</p>
-        </div>
-      </div>
-      <p>
-        The team was very supportive and kept me motivated
-      </p>
-      <p>
-        “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
-        for a big company. This was one of the best investments I’ve made in myself. ”
-      </p>
-    </article>
-    <article class="testimonial flow bg-neutral-100 text-secondary-400">
-      <div class="flex">
-        <div>
-          <img src="./images/image-jeanette.jpg" alt="Jeanette Harmon">
-        </div>
-        <div>
-          <h2 class="name">Jeanette Harmon</h2>
-          <p class="position">Verified Graduate</p>
-        </div>
-      </div>
-      <p>
-        An overall wonderful and rewarding experience</p>
-      <p>
-        “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
-        while doing something I love. ”
-      </p>
-    </article>
-    <article class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100">
-      <div class="flex">
-        <div>
-          <img class="border-primary-400" src="./images/image-patrick.jpg" alt="Patrick Abrams">
-        </div>
-        <div>
-          <h2 class="name">Patrick Abrams</h2>
-          <p class="position">Verified Graduate</p>
-        </div>
-      </div>
-      <p>
-        Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
-        learning from their experiences was easy.
-      </p>
-      <p>
-        “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
-        gave me the confidence necessary to be able to go out in the world and present myself as a capable
-        junior developer. The standard is above the rest. You will get the personal attention you need from
-        an incredible community of smart and amazing people. ”
-      </p>
-    </article>
-    <article class="testimonial flow bg-neutral-100 text-secondary-400">
-      <div class="flex">
-        <div>
-          <img src="./images/image-kira.jpg" alt="Kira Whittle">
-        </div>
-        <div>
-          <h2 class="name">Kira Whittle</h2>
-          <p class="position">Verified Graduate</p>
-        </div>
-      </div>
-      <p>
-        Such a life-changing experience. Highly recommended!
-      </p>
-      <p>
-        “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
-        professionals who can help me learn programming step by step. I was encouraged to enroll by a former
-        student of theirs who can only say wonderful things about the program. The entire curriculum and staff
-        did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
-        project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
-        could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
-        experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
-        100% recommend! ”
-      </p>
-    </article>
-  </main>
+<body><br>
+  
+      <div class="wrapper">
+          <p class="centre todo-title">Welcome to your Task Management App</p>
+            <div class="input-button-container2">
+
+              <div class="inp">
+
+                <input placeholder="Task To Do" class="js-name-input2" onkeydown="EnterKeyDown(event)">
+                
+                <input type = "date" class="js-due-date-input2" onkeydown="EnterKeyDown(event)">
+                <span class="label">Due Date</span> <!-- Added label text -->
+                <span class="focus-bg"></span>
+
+              </div>
+              
+              <button class="but" onclick="addToDo2();">Add</button>
+              <button class="but2" onclick="clearToDoList2();">Clear all</button>
+
+            </div> 
+            
+          <div class="js-todo-list2 todo-grid"></div>
+      </div><br>
+  
+       
+      <div class="wrapper centre">
+        <!--<button class="resetButton">Reset</button>-->
+        <button class= "js-subscribe-button">Subscribe Now</button>
+      </div><br>
+      <div class="wrapper centre">
+        <p>Shipping Calculator</p>
+        <p>Cost of orders over 40zl FREE</p>
+        <p>Cost of orders under 40zl delivery fee 9.99zl</p>
+        <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown(event)">
+        
+        <button onclick = "calculateTotal()" class="js-button">Calculate</button>
+        <p class="js-score"></p>
+        <p class="js-total-cost"></p>
+      </div> 
 
 
+          <main class="testimonial-grid">
+            <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
+              <div class="flex">
+                <div>
+                  <img  src="./images/mac.jpg" alt="title">
+                </div>
+                <div>
+                  <h2 class="name">Maciej Liberadzki</h2>
+                  <p class="position">System Administrator</p>
+                </div>
+              </div>
+              <p>
+                Kontrolery w projekcie REST API stworzonym w ASP.NET Core pełnią kluczową rolę w obsłudze żądań HTTP i są centralnym punktem, w którym logika aplikacji łączy się z protokołem HTTP. Oto główne zadania kontrolerów w takim projekcie
+              </p>
+              <p>
+Kontrolery przyjmują żądania HTTP od klientów (np. przeglądarek internetowych, aplikacji mobilnych, innych usług) i decydują, jak na nie reagować.
+Każda metoda w kontrolerze jest zwykle powiązana z konkretnym typem żądania HTTP (GET, POST, PUT, DELETE itp.) i określonym endpointem (ścieżką URL).
+Kontrolery często odpowiadają za walidację danych wejściowych przekazanych w żądaniach, np. parametrów zapytania, ciał żądań JSON, itp.
+ASP.NET Core oferuje funkcje walidacji modeli, które ułatwiają sprawdzanie poprawności danych wejściowych.
 
+              </p>
+            </article>
+            <article class="testimonial flow bg-secondary-400 text-neutral-100">
+              <div class="flex">
+                <div>
+                  <img src="./images/wlo.jpg" alt="Jonathan Walters">
+                </div>
+                <div>
+                  <h2 class="name">Maciej Libreadzki</h2>
+                  <p class="position">IT Cosultant</p>
+                </div>
+              </div>
+              <p>
+                Model-View-Controller (MVC) Pattern
+              <p>
+Model odpowiada za logikę biznesową i zarządzanie danymi aplikacji. Przechowuje dane i zasady ich przetwarzania.
+<br>Widok jest odpowiedzialny za prezentację danych użytkownikowi.
+<br>
+Kontroler pośredniczy między Modelem a Widokiem. Obsługuje interakcje użytkownika, przetwarza dane wejściowe. <br> Aktualizuje Model oraz Widok.
+</p>
+            </article>
+            <article class="testimonial flow bg-neutral-100 text-secondary-400">
+              <div class="flex">
+                <div>
+                  <img src="./images/img1.jpg" alt="Jeanette Harmon">
+                </div>
+                <div>
+                  <h2 class="name">Maciej Libreadzki</h2>
+                  <p class="position">Web Developer</p>
+                </div>
+              </div>
+              <p>
+                Best Practice for Project Structure</p>
+              <p>
+                Core Project: Contains the domain model and business logic.
+Infrastructure Project: Contains code that supports external concerns, such as data access, file system interactions, network calls, etc.
+Web/API/UI Project: The entry point to the application, such as a web API, MVC.
+
+
+              </p>
+            </article>
+            <article class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100">
+              <div class="flex">
+                <div>
+                  <img class="border-primary-400" src="./images/image-patrick.jpg" alt="Patrick Abrams">
+                </div>
+                <div>
+                  <h2 class="name">Malwina Michalak</h2>
+                  <p class="position">Verified Graduate</p>
+                </div>
+              </div>
+              <p>
+                Migration files are for updating the database structure to align with your entity model definitions, while MovieDbContext.cs is used for actual data operations (like queries and updates) according to your application's business logic.
+
+
+              </p>
+              <p>
+                Use the DbContext to perform CRUD (Create, Read, Update, Delete) operations on your data. This is where you write code to add new records, update existing ones, delete records, and query data from your database.
+              </p>
+            </article>
+            <article class="testimonial flow bg-neutral-100 text-secondary-400">
+              <div class="flex">
+                <div>
+                  <img src="./images/image-kira.jpg" alt="Kira Whittle">
+                </div>
+                <div>
+                  <h2 class="name">Malwina Michalak</h2>
+                  <p class="position">Verified Graduate</p>
+                </div>
+              </div>
+              <p>
+                Performing CRUD Operations
+              </p>
+              <p>
+                “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+                professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+                student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+                did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+                project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+                could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
+                experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+                100% recommend! ”
+              </p>
+            </article>
+          </main>
+
+
+  <script src="script.js"></script>
 
 </body>
 
